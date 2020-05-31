@@ -28,9 +28,9 @@ POST: http://localhost:8080/country-trip/countries   <br>
 }
 <br>
 {
-	"name":"TR",
-	"currency":"TL",
-	"exchangeRate": 7.57
+		"name":"TR",
+		"currency":"TL",
+		"exchangeRate": 7.57
 }
 <br>
 {
@@ -50,5 +50,33 @@ GET: http://localhost:8080/country-trip/countries/1/neighbours/5
 GET: http://localhost:8080/country-trip/countries/1/neighbours/6
 <br>
 GET: http://localhost:8080/country-trip/countries?start=BG&budgetPerCountry=100.0&totalBudget=1130.5&currency=EUR&exchangeRate=1.5
+<br>
+Response:
+<br>
+{
+<br>
+   &emsp; "neighbours": [
+        "GR",
+        "RO",
+        "MK",
+        "TR",
+        "SR"
+    ], 
+    <br>
+  &emsp;  "numNeighbours": 5,
+    <br>
+  &emsp;  "roundtrips": 2,
+    <br>
+  &emsp; "leftover": 130.5,
+    <br>
+  &emsp; "budgetPerCountry": {
+        "GR": 100.0,
+        "RO": 484.0,
+        "TR": 757.0,
+        "MK": 6154.0,
+        "SR": 11772.0
+    }
+    <br>
+}
 <br>
 GET: http://localhost:8080/country-trip/countries/all
